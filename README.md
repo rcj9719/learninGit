@@ -1,11 +1,27 @@
-"Readme message"
-Open up a Windows command prompt.
-Change into the directory where your source code is located in the command prompt.
-First, create a new repository in this directory git init. This will say "Initialized empty git repository in ....git" (... is the path).
-Now you need to tell git about your files by adding them to your repository. Do this with git add filename. If you want to add all your files, you can do git add .
-Now that you have added your files and made your changes, you need to commit your changes so git can track them. Type git commit -m "adding files". -m lets you add the commit message in line.
-So far, the above steps is what you would do even if you were not using github. They are the normal steps to start a git repository. Remember that git is distributed (decentralized), means you don't need to have a "central server" (or even a network connection), to use git.
-Now you want to push the changes to your git repository hosted with github. To you this by telling git to add a remote location, and you do that with this command:
-git remote add origin https://github.com/yourusername/your-repo-name.git
-Once you have done that, git now knows about your remote repository. You can then tell it to push (which is "upload") your commited files:
-git push -u origin master
+# The README.md document
+This document is used to describe or elaborate or include specific notes/references related to your repository. In this repository, the readme gives some important commands and links for starting use of git.
+
+## Important git commands
+
+### Branch commands
+git branch	//check available and active branches on local
+git branch -r	//check available and active branches on remote
+git checkout -b newBranchName	//create new branch from master
+git checkout newBranchName		//go to branch newBranchName
+git checkout -B newBranchName	//go to existing or create new branch newBranchName
+### File tracking
+git status	//check untracked files
+### Local machine to Staging area
+git add fileName	//add given fileName to staging area
+git add -A			//add all files from all directories
+git add .			//add all files from present directory
+### Creating a local commit
+git commit -m "msg"		//create a commit for all files in staging area
+### Git pull requests
+git pull origin branch2		//pull all files from remote branch2 to current local branch
+git pull origin				//maps metadata of all branches from remote to pulls it to local, eg branch2 and branch3
+git checkout branch2		//creates branch2 locally and pulls all files from remote branch2 into local branch2
+### Some other commands
+git diff			//compares all added or committed files with current local files for modification - previous vs current version
+git diff fileName	//compares added or committed fileName with current version of fileName on local
+git remote -v 		//gives aliases and their associated URLs 
