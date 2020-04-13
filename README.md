@@ -1,4 +1,6 @@
-# The README.md document
+# LearninGit notes
+
+## The README.md document
 This document is used to describe or elaborate or include specific notes/references related to your repository. In this repository, the readme gives some important commands and links for starting use of git.
 
 ## Important git commands
@@ -27,16 +29,20 @@ This document is used to describe or elaborate or include specific notes/referen
 ### Creating a local commit
 `git commit -m "msg"`	=> create a commit for all files in staging area
 
-### Git pull requests
-`git pull origin branch2`	=> pull all files from remote branch2 to current local branch
+### Git pull
+`git pull origin branch2`	=> pull all file references(metadata) from remote branch2 to current local branch
 
-`git pull origin` => maps metadata of all branches from remote to pulls it to local, eg branch2 and branch3
-
-`git checkout branch2` => creates branch2 locally and pulls all files from remote branch2 into local branch2
+`git pull origin` => maps metadata of all branches from remote to pulls it to local
 
 ### Some other commands
 `git diff` => compares all added or committed files with current local files for modification - previous vs current version
 
 `git diff fileName` => compares added or committed fileName with current version of fileName on local
 
-`git remote -v` => gives aliases and their associated URLs 
+`git remote -v` => gives aliases and their associated URLs
+
+`git restore <file>`	=> to discard changes in working directory
+
+`git stash` => stashes untracked local commits in a stack so that remote metadata can be pulled for up to date references
+
+`git stash pop` => pops out untracked local commits stashed previously
