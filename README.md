@@ -46,3 +46,20 @@ This document is used to describe or elaborate or include specific notes/referen
 `git stash` => stashes untracked local commits in a stack so that remote metadata can be pulled for up to date references
 
 `git stash pop` => pops out untracked local commits stashed previously
+
+## Dealing with branches
+
+### Renaming both local and remote branch
+`git branch -m <old_name> <new_name>` => Rename the local branch to the new name
+
+`git push <remote> --delete <old_name>` => Delete the old branch on remote - where <remote> is, for example, origin
+
+`git push <remote> :<old_name>` => Or shorter way to delete remote branch [:]
+
+`git push <remote> <new_name>` => Push the new branch to remote
+
+`git push <remote> -u <new_name>` => Reset the upstream branch for the new_name local branch
+
+### Renaming only remote branch
+
+`git push <remote> <remote>/<old_name>:refs/heads/<new_name> :<old_name>` => In this option, we will push the branch to the remote with the new name while keeping the local name as is
