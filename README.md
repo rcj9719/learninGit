@@ -29,6 +29,12 @@ This document is used to describe or elaborate or include specific notes/referen
 ### Creating a local commit
 `git commit -m "msg"`	=> create a commit for all files in staging area
 
+If you figured out that you want to change the commit message after it has been committed then type in the following amend command:
+
+`<br>git commit --amend`
+
+Then you will be prompt to change the commit message, and when you finish editing the message you can quit by typing `:wq`.
+
 ### Git pull
 `git pull origin branch2`	=> pull all file references(metadata) from remote branch2 to current local branch
 
